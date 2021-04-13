@@ -1,18 +1,19 @@
-const title = document.querySelector("#title")
-title.style.color = 'red';
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
 function handleClick(){
-    title.style.color = "blue";
-    checkit();
-}
-function checkit(){
-    if (title.style.color == "blue"){
-        console.log("shit");
-    } else{
-        console.log("happy");
-    }
+    // const currentClass = title.className;
+    // const hasClass = title.classList.contains(CLICKED_CLASS);
+    // if (hasClass) {
+    //     title.classList.remove(CLICKED_CLASS);
+    // } else {
+    //     title.classList.add(CLICKED_CLASS);
+    // }
+    title.classList.toggle(CLICKED_CLASS);
 }
 
-title.addEventListener("click", handleClick);
-document.title ="I own you now";
-console.log(title);
-console.dir(title);
+function init() {
+    title.addEventListener("click", handleClick);
+}
+init()

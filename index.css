@@ -2,6 +2,12 @@ body{
     background-color: peru;
 }
 h1{
-    color: white;
+    color:  #34495e;
+    transition: color 0.5s;
 }
-#title
+.clicked{
+    color: blue;
+}
+.btn {
+    cursor: pointer;
+}
