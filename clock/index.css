@@ -8,6 +8,10 @@ h1{
 .clicked{
     color: blue;
 }
-.btn {
-    cursor: pointer;
+.form,
+.greeting{
+    display: None;
+}
+.showing{
+    display: block;
 }
