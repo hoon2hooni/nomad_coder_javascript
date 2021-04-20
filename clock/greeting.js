@@ -12,7 +12,6 @@ function saveName(text){
 function handleSubmit(event){
     event.preventDefault();
     const currentValue = input.value;
-    console.log(currentValue);
     paintGreeting(currentValue);
     saveName(currentValue);
 }
@@ -27,17 +26,11 @@ function paintGreeting(text){
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `hello ${text}`;
 }
-// function saveName(key){
-//     이름 작성
-//     이름 저장
-//     다시 로드 네임 불러주기
-//     localStorage.key = ""
-// }
+
 function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
     if (currentUser === null){
         askForName();
-        // saveName(USER_LS);
     } else {
         paintGreeting(currentUser);
     }
