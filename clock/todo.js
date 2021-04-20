@@ -22,20 +22,37 @@ function paintToDo(text){
     const span = document.createElement("span");
     const newId = toDos.length + 1;
 
+    // function makeButtons(text,newID){
+    //     delBtn.innerHTML = "button";
+    //     delBtn.addEventListener("click",deleteTodo);
+    //     span.innerText = text; 
+    //     li.id = newId;
+    //     li.appendChild(delBtn);
+    //     li.appendChild(span);
+    //     toDoList.appendChild(li);
+    //     const toDoObj ={
+    //     text: text,
+    //     id: newId
+    // }
     delBtn.innerHTML = "button";
     delBtn.addEventListener("click",deleteTodo);
     span.innerText = text;
     li.id = newId;
-
     li.appendChild(delBtn);
     li.appendChild(span);
     toDoList.appendChild(li);
-    const toDoObj ={
-        text: text,
-        id: newId
-    };
-    toDos.push(toDoObj);
+    addToDoObjectToToDoList(text,newID);
     saveToDos();
+    
+    function addToDoObjectToToDoList(text,newID){
+        const toDoObj ={
+            text: text,
+            id: newId
+        };
+        toDos.push(toDoObj);
+    }
+    // toDos.push(toDoObj);
+    // saveToDos();
 }
 
 function handleSubmit(event){
