@@ -21,19 +21,6 @@ function paintToDo(text){
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
     const newId = toDos.length + 1;
-
-    // function makeButtons(text,newID){
-    //     delBtn.innerHTML = "button";
-    //     delBtn.addEventListener("click",deleteTodo);
-    //     span.innerText = text; 
-    //     li.id = newId;
-    //     li.appendChild(delBtn);
-    //     li.appendChild(span);
-    //     toDoList.appendChild(li);
-    //     const toDoObj ={
-    //     text: text,
-    //     id: newId
-    // }
     delBtn.innerHTML = "button";
     delBtn.addEventListener("click",deleteTodo);
     span.innerText = text;
@@ -51,8 +38,6 @@ function paintToDo(text){
         };
         toDos.push(toDoObj);
     }
-    // toDos.push(toDoObj);
-    // saveToDos();
 }
 
 function handleSubmit(event){
